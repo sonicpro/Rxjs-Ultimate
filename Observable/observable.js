@@ -17,5 +17,9 @@ const observer = {
     }
 };
 
-stream$.subscribe(observer);
+// stream$.subscribe(observer);
+// Or
+stream$.subscribe(value => console.log("Data", value),
+                  null, // error handling logic goes here,
+                  console.log.bind(null, "The asynchronous operation has completed."));
 
