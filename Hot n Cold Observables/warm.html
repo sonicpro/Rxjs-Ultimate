@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+  </head>
+  <body>
+    <p>The observable becomes hot when "sub1" subscribes. Hence "sub2" loses only the first data rather then first and second in case of "hot" observable.</p>
+    <p>You should use either refCount operator or Observable.connect() to start emitting the values.</p>
+    <script src="warm.js"></script>
+  </body>
+</html>
